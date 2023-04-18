@@ -1,68 +1,64 @@
-import React, { Fragment } from 'react';
+import ResetCSS from 'common/assets/css/style';
+import { DrawerProvider } from 'common/contexts/DrawerContext';
+import { theme } from 'common/theme/saasAppDark';
+import AppDownload from 'containers/SaasAppDark/AppDownload';
+import Banner from 'containers/SaasAppDark/Banner';
+import CallToAction from 'containers/SaasAppDark/CallToAction';
+import Clients from 'containers/SaasAppDark/Clients';
+import Footer from 'containers/SaasAppDark/Footer';
+import Monitoring from 'containers/SaasAppDark/Monitoring';
+import Navbar from 'containers/SaasAppDark/Navbar';
+import NewsFeed from 'containers/SaasAppDark/NewsFeed';
+import { ContentWrapper, GlobalStyle } from 'containers/SaasAppDark/saasAppDark.style';
+import Services from 'containers/SaasAppDark/Services';
+import StatsCounter from 'containers/SaasAppDark/StatsCounter';
+import Testimonials from 'containers/SaasAppDark/Testimonials';
+import VideoIntro from 'containers/SaasAppDark/VideoIntro';
 import Head from 'next/head';
+import React, { Fragment } from 'react';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
-import { agencyTheme } from 'common/theme/agency';
-import ResetCSS from 'common/assets/css/style';
-import { GlobalStyle, AgencyWrapper } from 'containers/Agency/agency.style';
-import Navbar from 'containers/Agency/Navbar';
-import BannerSection from 'containers/Agency/BannerSection';
-import FeatureSection from 'containers/Agency/FeatureSection';
-import AboutUsSection from 'containers/Agency/AboutUsSection';
-import WorkHistory from 'containers/Agency/WorkHistory';
-import BlogSection from 'containers/Agency/BlogSection';
-import TestimonialSection from 'containers/Agency/TestimonialSection';
-import TeamSection from 'containers/Agency/TeamSection';
-import VideoSection from 'containers/Agency/VideoSection';
-import NewsletterSection from 'containers/Agency/NewsletterSection';
-import QualitySection from 'containers/Agency/QualitySection';
-import Footer from 'containers/Agency/Footer';
-import { DrawerProvider } from 'common/contexts/DrawerContext';
-import FaqSection from 'containers/Agency/FaqSection';
 
-const Main = () => {
-	return (
-		<ThemeProvider theme={agencyTheme}>
-			<Fragment>
-				{/* Start agency head section */}
-				<Head>
-					<title>Agency | A react next landing page</title>
-					<meta name="theme-color" content="#10ac84" />
-					<meta name="Description" content="React next landing page" />
-					{/* Load google fonts */}
-					<link
-						href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-						rel="stylesheet"
-					/>
-				</Head>
-				<ResetCSS />
-				<GlobalStyle />
-				{/* End of agency head section */}
-				{/* Start agency wrapper section */}
+const SaasAppDark = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <Head>
+          <title>SaaS App Dark | A react next landing page</title>
+          <meta name="Description" content="React next landing page" />
+          <meta name="theme-color" content="#ec5555" />
+          {/* Load google fonts */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Sans:wght@400&family=Inter:wght@400;500;600&family=Manrope:wght@700&family=Noto+Serif+KR:wght@700;900&display=swap"
+          />
+        </Head>
 
-				<AgencyWrapper>
-					<Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-						<DrawerProvider>
-							<Navbar />
-						</DrawerProvider>
-					</Sticky>
-					<BannerSection />
-					<FeatureSection />
-					<AboutUsSection />
-					<WorkHistory />
-					<BlogSection />
-					<QualitySection />
-					<VideoSection />
-					<TestimonialSection />
-					<TeamSection />
-					<FaqSection />
-					<NewsletterSection />
-					<Footer />
-				</AgencyWrapper>
+        <ResetCSS />
+        <GlobalStyle />
 
-				{/* End of agency wrapper section */}
-			</Fragment>
-		</ThemeProvider>
-	);
+        <ContentWrapper>
+          <Sticky top={0} innerZ={200} activeClass="sticky-nav-active">
+            <DrawerProvider>
+              <Navbar />
+            </DrawerProvider>
+          </Sticky>
+          <Banner />
+          <Clients />
+          <Services />
+          <Monitoring />
+          <StatsCounter />
+          <VideoIntro />
+          <Testimonials />
+          <CallToAction />
+          <NewsFeed />
+          <AppDownload />
+          <Footer />
+        </ContentWrapper>
+      </Fragment>
+    </ThemeProvider>
+  );
 };
-export default Main;
+export default SaasAppDark;
