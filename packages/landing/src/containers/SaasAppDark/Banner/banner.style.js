@@ -95,7 +95,7 @@ export const BannerContent = styled.div`
 
 export const Buttons = styled.div`
 	gap: 15px;
-	display: inline-grid;
+	display: block;
 	margin-top: 35px;
 	grid-template-columns: repeat(2, 1fr);
 	@media only screen and (min-width: 768px) {
@@ -113,8 +113,9 @@ export const Buttons = styled.div`
 		color: ${themeGet('colors.buttonColor')};
 		min-height: 50px;
 		padding: 0 20px;
+		font-weight: 800;
+		
 		@media only screen and (min-width: 768px) {
-			min-height: 65px;
 			padding: 0 25px;
 		}
 		&:hover {

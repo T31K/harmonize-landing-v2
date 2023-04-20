@@ -182,6 +182,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     .navbar_button_one {
       font-weight: 400;
+      opacity: 0;
       background-color: transparent;
       color: ${themeGet('colors.white')};
       padding: 0;
@@ -199,6 +200,7 @@ export const GlobalStyle = createGlobalStyle`
         display: none;
       }
       &:hover {
+        cursor: default;
         color: ${themeGet('colors.primaryHover')};
         border-color: ${themeGet('colors.primaryHover')};
       }

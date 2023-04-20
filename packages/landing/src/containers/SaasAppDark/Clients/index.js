@@ -50,24 +50,8 @@ const settings = {
 };
 const Clients = () => {
   return (
-    <Section>
-      <Container width="1400px">
-        <Title>
-          <Text content="Simplified scheduling for more than 200,000 customers" />
-        </Title>
-        <SliderWrapper>
-          <Slider {...settings}>
-            {clients.map((client, i) => (
-              <Fragment key={i}>
-                <Figure>
-                  <NextImage src={client} alt="logo" />
-                </Figure>
-              </Fragment>
-            ))}
-          </Slider>
-        </SliderWrapper>
-      </Container>
-    </Section>
+    <>
+    </>
   );
 };
 

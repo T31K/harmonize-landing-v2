@@ -5,14 +5,14 @@ import Section, { Grid, Item, SectionHeading } from './services.style';
 
 const Services = () => {
   return (
-    <Section id="how-to">
+    <Section id="features">
       <Container width="1400px">
         <SectionHeading>
           <Heading
             as="h2"
-            content="Choose dashboard for every stage of your customer journey"
+            content="Get More Done with Less"
           />
-          <Text content="The rise of mobile devices transforms the way we consume information entirely and the world's most relevant channels such as Facebook and Instagram are almost exclusively used on mobile" />
+          <Text content="A Deep Dive into Our Top-Notch Features!" />
         </SectionHeading>
         <Grid>
           {services.map((service) => (

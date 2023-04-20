@@ -1,10 +1,10 @@
-import React from 'react';
+import { useRef, useEffect } from 'react';
 import { openModal, closeModal } from '@redq/reuse-modal';
 import Container from 'common/components/UI/Container';
 import Text from 'common/components/Text';
 import Button from 'common/components/Button';
-import NextImage from 'common/components/NextImage';
-import Image from 'common/components/Image';
+import videoUrl from "common/assets/videos/demo.mp4"
+
 import Section, {
   BannerContentWrapper,
   BannerContent,
@@ -12,8 +12,6 @@ import Section, {
   Buttons,
   Figure,
 } from './banner.style';
-import playIcon from 'common/assets/image/saasAppDark/icons/play.svg';
-import dashboard from 'common/assets/image/saasAppDark/banner-dashboard.png';
 
 // close button for modal
 const CloseModalButton = () => (
@@ -55,6 +53,15 @@ const Banner = () => {
       closeOnClickOutside: true,
     });
   };
+  
+  const videoRef = useRef(null);
+  const playVideo = () => {
+    videoRef.current.play();
+  };
+  
+  useEffect(() => {
+    videoRef.current.play();
+  }, [])
 
   return (
     <Section id="home">
@@ -62,31 +69,30 @@ const Banner = () => {
         <BannerContentWrapper>
           <BannerContent>
             <h2 className="animate__animated animate__fadeInUp">
-              The leading Customer <span>dashboard</span> for your daily
-              workspace
+            Turbocharged music controls
             </h2>
             <Text
               className="animate__animated animate__fadeInUp"
-              content="Join 30,000+ businesses that use Segment's software and APIs to collect, clean, and control their customer data."
+              content="A beautifully designed app for music at your fingertips"
+            />
+            <Text
+              className="animate__animated animate__fadeInUp"
+              content="from anywhere, at anytime."
             />
             <Buttons>
               <Button
                 colors="primary"
-                title="Get Free Trial"
+                title="Download Now"
                 className="button-one"
               />
-              <button className="button-two" onClick={handleVideoModal}>
-                <span className="play-icon">
-                  <img src={playIcon?.src} alt="play Icon" />
-                </span>
-                <span className="btn-txt">
-                  <span className="primary">Explore</span> Intro Video
-                </span>
-              </button>
+              <div style={{'margin-top':'10px'}}> Version 1.2.6 (beta)</div>
+          
             </Buttons>
           </BannerContent>
           <Figure className="hero-banner">
-            <NextImage src={dashboard} alt="dashboard" />
+            <video ref={videoRef} autoPlay preload="auto"  controls style={{'width': '100%', borderRadius: '20px'}}>
+              <source src={videoUrl} type="video/mp4" />
+            </video>
           </Figure>
         </BannerContentWrapper>
       </Container>

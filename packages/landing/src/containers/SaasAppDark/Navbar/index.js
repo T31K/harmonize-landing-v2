@@ -82,12 +82,11 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 iconPosition="left"
                 icon={<img src={lockIcon?.src} alt="lock icon" />}
                 title="Login"
-                onClick={handleLoginModal}
                 className="navbar_button navbar_button_one"
               />
               <Link href="#">
                 <a className="navbar_button navbar_button_two">
-                  <Button {...button} title="Join Free" />
+                  <Button {...button} title="Download Now" />
                 </a>
               </Link>
             </div>

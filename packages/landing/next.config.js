@@ -1,10 +1,18 @@
-const withPlugins = require('next-compose-plugins');
-
-const nextConfig = {
-  // distDir: '../../dist/functions/next'
-  images: {
-    domains: ['pbs.twimg.com'],
+module.exports = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp4)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'static/videos/',
+            publicPath: '/_next/static/videos/',
+          },
+        },
+      ],
+    });
+    return config;
   },
 };
-
-module.exports = withPlugins([], nextConfig);

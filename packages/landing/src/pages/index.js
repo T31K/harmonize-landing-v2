@@ -24,7 +24,7 @@ const SaasAppDark = () => {
     <ThemeProvider theme={theme}>
       <Fragment>
         <Head>
-          <title>SaaS App Dark | A react next landing page</title>
+          <title>Harmonize</title>
           <meta name="Description" content="React next landing page" />
           <meta name="theme-color" content="#ec5555" />
           {/* Load google fonts */}
@@ -48,13 +48,7 @@ const SaasAppDark = () => {
           <Banner />
           <Clients />
           <Services />
-          <Monitoring />
-          <StatsCounter />
           <VideoIntro />
-          <Testimonials />
-          <CallToAction />
-          <NewsFeed />
-          <AppDownload />
           <Footer />
         </ContentWrapper>
       </Fragment>

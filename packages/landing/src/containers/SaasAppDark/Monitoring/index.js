@@ -14,8 +14,7 @@ import Section, {
 
 const Monitoring = () => {
   return (
-    <Section>
-      <Container width="1300px">
+    <div style={{'padding-bottom': '200px'}}>
         <Grid>
           <FigureGroup>
             <Fade up>
@@ -49,8 +48,7 @@ const Monitoring = () => {
             </FeatureList>
           </Content>
         </Grid>
-      </Container>
-    </Section>
+    </div>
   );
 };
 

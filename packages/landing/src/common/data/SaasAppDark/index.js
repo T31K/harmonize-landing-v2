@@ -1,4 +1,4 @@
-// menu items
+// here is the navbar navbar here
 export const menu_items = [
   {
     label: 'Home',
@@ -6,23 +6,13 @@ export const menu_items = [
     offset: '70',
   },
   {
-    label: 'How to',
-    path: '#how-to',
-    offset: '70',
-  },
-  {
-    label: 'Testimonials',
-    path: '#testimonials',
-    offset: '70',
-  },
-  {
-    label: 'Newsfeed',
-    path: '#newsfeed',
+    label: 'Features',
+    path: '#features',
     offset: '70',
   },
   {
     label: 'Download App',
-    path: '#download_app',
+    path: '#home',
     offset: '70',
   },
 ];
@@ -59,27 +49,27 @@ export const clients = [envato, evernote, forbes, geekwire, slack, usaToday];
 export const services = [
   {
     id: 1,
-    title: 'Fast Performance',
+    title: 'Blazing Fast',
     icon: service1,
   },
   {
     id: 2,
-    title: 'User Customization',
+    title: 'Fully Customizable',
     icon: service2,
   },
   {
     id: 3,
-    title: 'Modify structure',
+    title: 'Minimal Dependency',
     icon: service3,
   },
   {
     id: 4,
-    title: 'Customer Analysis',
+    title: 'Meticulously Crafted',
     icon: service4,
   },
   {
     id: 5,
-    title: 'Instant Support',
+    title: 'Music Focused',
     icon: service5,
   },
 ];
@@ -245,20 +235,11 @@ export const footer = {
           link: '#',
         },
         {
-          id: 3,
-          title: 'About Us',
-          link: '#',
-        },
-        {
           id: 4,
           title: 'Copyright',
           link: '#',
         },
-        {
-          id: 5,
-          title: 'Popular Campaign',
-          link: '#',
-        },
+  
       ],
     },
     {
@@ -267,7 +248,7 @@ export const footer = {
       list: [
         {
           id: 1,
-          title: 'Return Policy ',
+          title: 'Refund Policy ',
           link: '#',
         },
         {
@@ -275,60 +256,16 @@ export const footer = {
           title: 'Privacy Policy',
           link: '#',
         },
-        {
-          id: 3,
-          title: 'Terms & Conditions',
-          link: '#',
-        },
-        {
-          id: 4,
-          title: 'Site Map',
-          link: '#',
-        },
-        {
-          id: 5,
-          title: 'Store Hours',
-          link: '#',
-        },
+
       ],
     },
-    {
-      id: 4,
-      title: 'My Account',
-      list: [
-        {
-          id: 1,
-          title: 'Press inquiries',
-          link: '#',
-        },
-        {
-          id: 2,
-          title: 'Social media ',
-          link: '#',
-        },
-        {
-          id: 3,
-          title: 'directories',
-          link: '#',
-        },
-        {
-          id: 4,
-          title: 'Images & B-roll',
-          link: '#',
-        },
-        {
-          id: 5,
-          title: 'Permissions',
-          link: '#',
-        },
-      ],
-    },
+
   ],
   contactInfo: {
     title: 'Contact info',
     address: `Amsterdam, Netherlands`,
     phone: `+31 62 19 22 705`,
     openingTime: `7 Days - 8am - 10pm`,
-    email: `info@redqteam.com`,
+    email: `support@getharmonize.app`,
   },
 };
